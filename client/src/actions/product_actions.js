@@ -16,7 +16,7 @@ import {
 } from './types';
 
 export function getProductDetail(id){
-    const request = axios.get(`${PRODUCT_SERVER}/articles_by_id?id=${id}&type=single`)
+    const request = axios.get(`https://shielded-spire-30008.herokuapp.com${PRODUCT_SERVER}/articles_by_id?id=${id}&type=single`)
     .then(response=>{
        return response.data[0]
     })
@@ -37,7 +37,7 @@ export function clearProductDetail(){
 export function getProductsBySell(){
     
     //articles?sortBy=sold&order=desc&limit=4
-    const request = axios.get(`${PRODUCT_SERVER}/articles?sortBy=sold&order=desc&limit=4`)
+    const request = axios.get(`https://shielded-spire-30008.herokuapp.com${PRODUCT_SERVER}/articles?sortBy=sold&order=desc&limit=4`)
         .then(response => response.data);
     console.log(request)
     return {
@@ -47,7 +47,7 @@ export function getProductsBySell(){
 }
 
 export function getProductsByArrival(){
-    const request = axios.get(`${PRODUCT_SERVER}/articles?sortBy=createAt&order=desc&limit=4`)
+    const request = axios.get(`https://shielded-spire-30008.herokuapp.com${PRODUCT_SERVER}/articles?sortBy=createAt&order=desc&limit=4`)
         .then(response => response.data);
     console.log(request)
     return {
@@ -63,7 +63,7 @@ export function getProductsToShop(skip, limit, filters =[],previousState = []){
         skip,
         filters
     }
-    const request = axios.post(`${PRODUCT_SERVER}/shop`,data)
+    const request = axios.post(`https://shielded-spire-30008.herokuapp.com${PRODUCT_SERVER}/shop`,data)
     .then(response =>{
 
         let newState = [
@@ -83,7 +83,7 @@ export function getProductsToShop(skip, limit, filters =[],previousState = []){
 }
 
 export function getGenuses(){
-    const request = axios.get(`${PRODUCT_SERVER}/genuses`)
+    const request = axios.get(`https://shielded-spire-30008.herokuapp.com${PRODUCT_SERVER}/genuses`)
         .then(response => response.data);
    
     return {
@@ -93,7 +93,7 @@ export function getGenuses(){
 }
 
 export function getTypes() {
-    const request = axios.get(`${PRODUCT_SERVER}/types`)
+    const request = axios.get(`https://shielded-spire-30008.herokuapp.com${PRODUCT_SERVER}/types`)
         .then(response => response.data);
     console.log(request)
     return {
@@ -104,7 +104,7 @@ export function getTypes() {
 
 export function addProduct(dataToSubmit){
 
-    const request = axios.post(`${PRODUCT_SERVER}/article`,dataToSubmit)
+    const request = axios.post(`https://shielded-spire-30008.herokuapp.com${PRODUCT_SERVER}/article`,dataToSubmit)
     .then(response => {
         return response.data
     });

@@ -16,7 +16,7 @@ import {
     } from './types';
 
 export function registerUser(dataToSubmit){
-    const request = axios.post(`${USER_SERVER}/register`,dataToSubmit)
+    const request = axios.post(`https://shielded-spire-30008.herokuapp.com${USER_SERVER}/register`,dataToSubmit)
     .then(response => response.data);
     
     return {
@@ -26,7 +26,7 @@ export function registerUser(dataToSubmit){
 }
 
 export function loginUser(dataToSubmit){
-    const request = axios.post(`${USER_SERVER}/login`,dataToSubmit)
+    const request = axios.post(`https://shielded-spire-30008.herokuapp.com${USER_SERVER}/login`,dataToSubmit)
     .then(response => response.data);
     console.log(request);
     return{
@@ -57,7 +57,7 @@ export function logoutUser() {
 }
 
 export function addToCart(_id){
-    const request = axios.post(`${USER_SERVER}/addToCart?productId=${_id}`)
+    const request = axios.post(`https://shielded-spire-30008.herokuapp.com${USER_SERVER}/addToCart?productId=${_id}`)
     .then(response => response.data);
     return  {
         type: ADD_TO_CART,
@@ -67,7 +67,7 @@ export function addToCart(_id){
 
 
 export function getCartItem(cartItems, userCart){
-    const request = axios.get(`${PRODUCT_SERVER}/articles_by_id?id=${cartItems}&type=array`)
+    const request = axios.get(`https://shielded-spire-30008.herokuapp.com${PRODUCT_SERVER}/articles_by_id?id=${cartItems}&type=array`)
         .then(response => {
            userCart.forEach(item =>{
                console.log(response.data)
@@ -87,7 +87,7 @@ export function getCartItem(cartItems, userCart){
 }
 
 export function removeCartItem(id){
-    const request = axios.get(`${USER_SERVER}/removeFromCart?_id=${id}`)
+    const request = axios.get(`https://shielded-spire-30008.herokuapp.com${USER_SERVER}/removeFromCart?_id=${id}`)
         .then(response => {
             console.log("gdfhsdgf", response);
             response.data.cart.forEach(item => {
@@ -108,7 +108,7 @@ export function removeCartItem(id){
 
 export function onSuccessBuy(data){
 
-    const request = axios.post(`${USER_SERVER}/successBuy`,data)
+    const request = axios.post(`https://shielded-spire-30008.herokuapp.com${USER_SERVER}/successBuy`,data)
     .then(response =>{
         console.log(response.data)
         return response.data
@@ -123,7 +123,7 @@ export function onSuccessBuy(data){
 
 export function updateUserData(dataToSubmit){
 
-    const request = axios.post(`${USER_SERVER}/update_profile`,dataToSubmit)
+    const request = axios.post(`https://shielded-spire-30008.herokuapp.com${USER_SERVER}/update_profile`,dataToSubmit)
         .then(response => {
             return response.data
         });
@@ -144,7 +144,7 @@ export function clearUpdateUser(){
 
 export function updateUserPassword(dataToSubmit){
 
-    const request = axios.post(`${USER_SERVER}/update_password`, dataToSubmit)
+    const request = axios.post(`https://shielded-spire-30008.herokuapp.com${USER_SERVER}/update_password`, dataToSubmit)
         .then(response => {
             return response.data
         });
