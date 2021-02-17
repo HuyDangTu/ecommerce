@@ -37,7 +37,7 @@ export function loginUser(dataToSubmit){
 
 
 export function auth(){
-    const request = axios.get(`${USER_SERVER}/auth`)
+    const request = axios.get(`https://shielded-spire-30008.herokuapp.com${USER_SERVER}/auth`)
     .then(response => response.data);
 
     return {
