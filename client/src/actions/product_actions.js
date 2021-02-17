@@ -117,12 +117,10 @@ export function addProduct(dataToSubmit){
 
 
 export function clearProduct(){
-    
     return{
         type: CLEAR_PRODUCT,
         payload: ''
     }
-
 }
 
 
