@@ -2,7 +2,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function (app) {
     app.use('/api',createProxyMiddleware({
-            target: 'https://shielded-spire-30008.herokuapp.com/',
+            target: 'http://localhost:3002',
             changeOrigin: true
         })
     );

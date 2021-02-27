@@ -44,11 +44,10 @@ const HomeSlider = (props) => {
                  <div className="slider_image"
                      style={{
                          background: `url(${item.img})`,
-                         height: `${window.innerHeight/1.5}px`,
+                         height: `50vh`,
                          backgroundSize: 'cover', 
                          backgroundRepeat: 'no-repeat',
                          backgroundPosition: 'center'}}>
-                            z
                             <div className="slider_action">
                             <div className='slide_title'>{item.lineOne}</div>
                             <div className='slide_low_title'>{item.lineTwo}</div>

@@ -15,7 +15,7 @@ import faTh from '@fortawesome/fontawesome-free-solid/faTh';
 class Shop extends Component {
     
     state = {
-        grid: '',
+        grid: 'card_grid',
         limit: 6,
         skip: 0,
         filters:{
@@ -110,10 +110,12 @@ class Shop extends Component {
                 <div className="shop_container">
                     <div className="shop_wrapper">
                     <div className="row">
-                        <div className="col-xl-3 shop_left">
+                        <div className="col-xl-3 col-lg-3 shop_left">
+                            <div className="checkbox_wrapper">
                             <CollapseCheckBox
                                 iniState={true}
                                 title="Genus"
+                                filters={true}
                                 list={products.genuses}
                                 handleFilters={(filters)=>{
                                     this.handleFilters(filters,'genus')
@@ -122,6 +124,7 @@ class Shop extends Component {
                             <CollapseCheckBox
                                 iniState={false}
                                 title="Types"
+                                filters={true}
                                 list={products.types}
                                 handleFilters={(filters) => {
                                     this.handleFilters(filters, 'type')
@@ -130,16 +133,47 @@ class Shop extends Component {
                             <CollapseRadio
                                 iniState={false}
                                 title="Price"
+                                filters={true}
                                 list={price}
                                 handleFilters={(filters) => {
                                     this.handleFilters(filters, 'price')
                                 }}
                             />
+                            </div>
+                            <div className="filters">
+                                    <CollapseCheckBox
+                                        initState={true}
+                                        title="Genus"
+                                        filters={false}
+                                        list={products.genuses}
+                                        handleFilters={(filters) => {
+                                            this.handleFilters(filters, 'genus')
+                                        }}
+                                    />
+                                    <CollapseCheckBox
+                                        initState={true}
+                                        title="Types"
+                                        filters={false}
+                                        list={products.types}
+                                        handleFilters={(filters) => {
+                                            this.handleFilters(filters, 'type')
+                                        }}
+                                    />
+                                    <CollapseRadio
+                                        initState={true}
+                                        title="Price"
+                                        filters={false}
+                                        list={price}
+                                        handleFilters={(filters) => {
+                                            this.handleFilters(filters, 'price')
+                                        }}
+                                    />
+                            </div>
                         </div>
-                        <div className="col-xl-9 shop_right">
+                            <div className="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12  shop_right">
                             <div className="right">
                                 <div className="shop_options">
-                                    <div className="shop_grids clear">
+                                    {/* <div className="shop_grids clear">
                                             <div className={`grid_btn ${this.state.grid ? '' : 'active'}`}
                                                 onClick={() => this.handleGrid()}
                                             >
@@ -153,7 +187,7 @@ class Shop extends Component {
 
                                         </div>
                                        
-                                    </div>
+                                    </div> */}
                                 </div>
                                
                                     <LoadmoreCards

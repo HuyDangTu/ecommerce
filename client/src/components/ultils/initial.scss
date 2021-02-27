@@ -2,8 +2,10 @@ $redColor: #E96865;
 $blueColor: #C6E6FF;
 $darkBlueColor: #5d96ff;
 $secondcolor: #F4F2ED;
-$primaryColor:#7166F9;
+$primaryColor:#154100;
 $linkColor: #707070;
+$buttonColor: #f8ba8c;
+$yellowColor: #ffecb9;
 
 @function calc_width($element_width) {
     @return (100vw * $element_width / 1920);

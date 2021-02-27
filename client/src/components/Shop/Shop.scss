@@ -17,6 +17,11 @@ $primaryColor:#154100;
 .shop_container{
     width: 80%;
     margin: auto;
+     .shop_left{
+        .filters{
+            display: none;         
+        }
+    }
 }
 .shop_options{
     padding-top: 10px;
@@ -53,5 +58,49 @@ $primaryColor:#154100;
         align-items: center;
         justify-content: center;
        color: white;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .shop_container{
+        .shop_wrapper{
+            width: 100%;
+            .shop_left{
+                .checkbox_wrapper{
+                    display: none;
+                }
+                .filters{
+                    display: inline;
+                    display:flex;
+                    width: 100%;
+                    .collape_items_wrapper{
+                        width: 100%;
+                        background: white;
+                        ul{
+                            border-bottom: none !important;
+                            .MuiCollapse-container{
+                                .MuiCollapse-wrapper{
+                                    .MuiCollapse-wrapperInner{
+                                        .MuiList-root{
+                                            display: flex;
+                                            flex-direction: column;
+                                            .MuiListItemText-root{
+                                                span{font-size: 2vw;}
+                                            }
+                                        }
+                                        label{
+                                            .MuiTypography-root{
+                                                font-size: 2vw;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+               
+            }
+        }
     }
 }

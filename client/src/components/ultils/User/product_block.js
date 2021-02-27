@@ -60,7 +60,6 @@ const UserProductBlock = ({ products,type,removeItem}) => {
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
-                                    height: "10vh", 
                                 }}
                             ></div>
                         </div>

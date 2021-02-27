@@ -8,16 +8,16 @@ import MyButton from '../components/ultils/button'
 
 const links = [
     {
-        name: 'Transaction',
-        linkTo: '/users/transaction'
+        name: 'My Cart',
+        linkTo: '/users/cart'
     },
     {
-        name: 'User Information',
+        name: 'Edit Info',
         linkTo: '/users/user_profile'
     },
     {
-        name: 'My Cart',
-        linkTo: '/users/cart'
+        name: 'History',
+        linkTo: '/users/transaction'
     },
 ];
 
@@ -27,7 +27,7 @@ const admin = [
         linkTo: '/admin/site_info'
     },
     {
-        name: 'Add products',
+        name: 'Add product',
         linkTo: '/admin/add_product'
     },
     {
@@ -41,20 +41,20 @@ const UserLayout = (props) => {
         <Layout>
             <div className="userLayout">
                 <div className="userLayout_container">
-                    <div className="row">
-                        <div className="col-xl-3">
+                    <div className="row no-gutters">
+                        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                             <div className="userLayout_left_nav">
                                 <div>
-                                    <h2>User information</h2>
+                                    <h2>User Info</h2>
                                     <div className="links">
                                         <span>{props.user.userData.name} {props.user.userData.lastname}</span>
                                         <span>{props.user.userData.email} </span>
                                     </div>
-                                    <MyButton
+                                    {/* <MyButton
                                         type="default"
                                         title="Edit account info"
                                         linkTo="/users/user_profile"
-                                    />
+                                    /> */}
                                 </div>
                                 <div>
                                 <h2>My Account</h2>
@@ -88,7 +88,7 @@ const UserLayout = (props) => {
                                 }
                             </div>
                         </div>
-                        <div className="col-xl-9">
+                        <div className="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9 ">
                             <div className="userLayout_right">
                                 {props.children}
                             </div>

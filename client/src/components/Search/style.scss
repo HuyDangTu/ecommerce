@@ -77,9 +77,14 @@ $result-text-color: #424444;
   z-index: 10;
   .container {
     padding:0;
+    height: fit-content;
     .content {
+      a{
+
+      }:hover{
+          text-decoration: none;
+      }
       height: 100%;
-      padding: 0 0 30px 0;
       h5{
         margin: 10px 0px 10px 10px;
         color: $primaryColor;
@@ -97,7 +102,7 @@ $result-text-color: #424444;
         }
         cursor: pointer;
         &:hover {
-          background-color: #aacbe06e;
+          background-color: $secondcolor;
         }
         .user_infor_wrapper{
           display: flex;
@@ -113,6 +118,8 @@ $result-text-color: #424444;
             color:black;
             padding: 0px 10px;
           }
+           
+          
         }
         .tag_infor_wrapper{
           width:100%;
@@ -141,5 +148,21 @@ $result-text-color: #424444;
       padding: 2px 3px;
       color: $base-color;
     }
+  }
+}
+
+
+@media screen and (max-width: 768px){
+  .search {
+    margin-top: 10px;
+    height:6vw;
+  }
+}
+
+
+@media screen and (max-width: 576px){
+  .search {
+    margin-top: 10px;
+    height:8vw;
   }
 }

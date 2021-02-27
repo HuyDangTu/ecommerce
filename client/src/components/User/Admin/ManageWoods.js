@@ -103,7 +103,6 @@ class ManageWoods extends Component {
                                 formData={this.state.formData.name}
                                 change={(element) => this.updateForm(element)}
                             />
-
                             <button className='create__button' onClick={(event) => { this.submitForm(event) }}>
                                 Add woods
                             </button>

@@ -524,7 +524,7 @@ app.post('/api/users/update_password', auth, (req, res) => {
     })
 })
 
-app.post('/api/users/search', auth, (req, res) => {
+app.post('/api/users/search',(req, res) => {
 
     let limit = req.body.limit ? parseInt(req.body.limit) : 3;
     let skip = req.body.skip ? parseInt(req.body.skip) : 0;

@@ -16,7 +16,7 @@ const CardBlockShop = (props) => {
                     />
                 </div>
                 : 
-                <div className="col-xl-4">
+                    <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 ">
                     <Card
                         key={card._id}
                         {...card}

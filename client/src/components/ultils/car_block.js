@@ -7,9 +7,10 @@ const CardBlock = (props) => {
     const renderCards = () =>(
         props.list ? props.list.map((card,i)=>
             (
-            <div className="col-xl-3">
+            <div className="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
             <Card
                 key={i}
+                grid="card_grid"
                 {...card}
             />
             </div>

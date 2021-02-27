@@ -139,15 +139,14 @@ class Register extends Component {
             <Layout>
             <div className="pape_wrapper">
                     <div className="row no-gutters">
-                        <div className="col-xl-3 no-gutters"></div>
-                        <div className="col-xl-6 no-gutters">
+                        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-2 col-1 no-gutters"></div>
+                        <div className="col-xl-6 col-lg-6 col-md-6 col-sm-8 col-10 no-gutters">
                             <div className="register_container">
                                 <div className="register_login_container">
                                     <form className="register_form" onSubmit={(event => this.submitForm(event))}>
                                         <div className="register__tittle">Register</div>
                                         <div className="personal_info">Personal information</div>
                                         <div className="register__row1">
-
                                             <FormField
                                                 id={'name'}
                                                 formData={this.state.formData.name}
@@ -206,7 +205,7 @@ class Register extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-3 no-gutters"></div>
+                        <div className="col-xl-3 col-lg-3 col-md-3 col-sm-2 col-1 no-gutters"></div>
                     </div>
                 <Dialog open={this.state.formSuccess}>
                     <div classname="dialog_alert">

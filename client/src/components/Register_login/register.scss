@@ -64,8 +64,8 @@ $linkColor: #707070;
         input{
             @include general;
             color: black;
-            box-shadow: 1px 1px 5px #CBCBCB;
-            border:none;
+            border: 1px solid #ddd;
+       
         }
     }
     
@@ -76,3 +76,29 @@ $linkColor: #707070;
 }
 
 
+@media screen and (max-width: 576px){
+    .register_form{
+        .register__row1, .register__row3,.register_row4{
+            flex-direction: column;
+            .formField_container{
+                width:100%;
+                margin-top: 20px;
+            }
+            .my_link{
+                width: 100%;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+        }
+         .account_info,.personal_info{
+           text-align: center;
+            padding: 0;
+        }
+        .register_button{
+            width: 100%;
+        }
+        .formBlock{
+
+        }
+    }
+}

@@ -21,7 +21,7 @@ export function search(keyword, skip, limit, prevState = []) {
     else {
         console.log(prevState);
         let data = { keyword, skip, limit }
-        const request = axios.post(`https://shielded-spire-30008.herokuapp.com${USER_SERVER}/search`, data)
+        const request = axios.post(`${USER_SERVER}/search`, data)
             .then(response => {
                 let newUsers = [
                     ...prevState.users,
@@ -49,7 +49,7 @@ export function search(keyword, skip, limit, prevState = []) {
 
 export function searchUser(keyword) {
     let data = { keyword }
-    const request = axios.post(`https://shielded-spire-30008.herokuapp.com${USER_SERVER}/search`, data)
+    const request = axios.post(`${USER_SERVER}/search`, data)
         .then((response) => {
             console.log(response)
             return response.data

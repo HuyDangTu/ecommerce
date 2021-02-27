@@ -50,6 +50,7 @@ class ProdImg extends Component {
     showThumbs = () =>(
         this.state.lightboxImages.map((item,i)=>(
             i > 0 ?
+                
                 <div
                 key = {i}
                 onClick={()=>this.handlelightBox(i)}
@@ -70,34 +71,35 @@ class ProdImg extends Component {
         const {detail} = this.props;
         return (
             detail.images ?
-            <div className="product_image_container">
-                <div className="main_pic">
-                    <div
-                        style={{
-                            background: `url(${this.renderCardImage(detail.images)})`,
-                            backgroundPosition: 'center',
-                            backgroundSize: 'cover',
-                            backgroundRepeat: 'no-repeat',
-                            width: '500px', 
-                            height: '500px',
-                        }}
-                        onClick={()=> this.handlelightBox(0)}
-                    >
-                    </div>
+            <div className="product_image">
+                <div className="product_image_container">
+                    {/* <div className="main_pic"> */}
+                        {/* <div
+                            style={{
+                                background: `url(${this.renderCardImage(detail.images)})`,
+                                backgroundPosition: 'center',
+                                backgroundSize: 'cover',
+                                backgroundRepeat: 'no-repeat',
+                            }}
+                            onClick={()=> this.handlelightBox(0)}
+                        >
+                        </div> */}
+                        {/* </div> */}
+                        <img src={`${this.renderCardImage(detail.images)}`} onClick={() => this.handlelightBox(0)} className="main_pic" />
                 </div>
                 <div className="main_thumbs">
-                        {this.showThumbs(detail)}
-                </div>
-                {
+                            {this.showThumbs(detail)}
+                    </div>
+                    {
                     this.state.lightbox ?
-                        <ImageLightBox 
+                        <ImageLightBox
                             id={detail.id}
                             images={this.state.lightboxImages}
                             open={this.state.open}
                             pos={this.state.imagePos}
-                            onclose={() => this.handlelightBoxClose()}  
+                            onclose={() => this.handlelightBoxClose()}
                         />
-                    : null
+                        : null
                 }
             </div>
             :<div></div>

@@ -21,7 +21,8 @@ $primaryColor:#154100;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    padding: 30px;
+    width: 80%;
+    margin: 0 auto; 
     .card_title{
         @include text-font();
         font-size: 25px;
@@ -30,6 +31,5 @@ $primaryColor:#154100;
     }
     .cards_wrapper{
         display: flex;
-        
     }
 }

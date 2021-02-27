@@ -61,28 +61,39 @@ class CollapseRadio extends Component {
     
     render() {
         return (
-            <div>
+            this.props.filters ? 
+                <div className="collape_items_wrapper">
+                    <List style={{ borderBottom: '1px solid #dbdbdb' }}>
+                        <ListItem onClick={this.handleClick} style={{ padding: '10px 23px 10px 0px' }}>
+                            <ListItemText
+                                primary={this.props.title}
+                                className="collapse_title"
+                            />
+                            {this.handleAngle()}
+                        </ListItem>
+                        <Collapse in={this.state.open} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <RadioGroup 
+                                        aria-label="prices"
+                                        name="prices"
+                                        value={this.state.value}
+                                        onChange={this.handleChange}
+                                    >
+                                    {this.renderList()}
+                                </RadioGroup>
+                            </List>
+                        </Collapse>
+                    </List> 
+                </div>
+            :
+            <div className="collape_items_wrapper">
                 <List style={{ borderBottom: '1px solid #dbdbdb' }}>
-                    <ListItem onClick={this.handleClick} style={{ padding: '10px 23px 10px 0px' }}>
-                        <ListItemText
-                            primary={this.props.title}
-                            className="collapse_title"
-                        />
-                        {this.handleAngle()}
-                    </ListItem>
                     <Collapse in={this.state.open} timeout="auto" unmountOnExit>
                         <List component="div" disablePadding>
-                            <RadioGroup 
-                                    aria-label="prices"
-                                    name="prices"
-                                    value={this.state.value}
-                                    onChange={this.handleChange}
-                                >
-                                {this.renderList()}
-                            </RadioGroup>
+                            {this.renderList()}
                         </List>
                     </Collapse>
-                </List> 
+                </List>
             </div>
         );
     }

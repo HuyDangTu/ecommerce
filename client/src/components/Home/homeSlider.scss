@@ -21,13 +21,12 @@ $buttonColor: #f8ba8c;
     bottom: 100px;
     margin-left: 50px;
 
- 
     .slide_title{
-     font-size: 50px;
+     font-size: 3.5vw;
      font-weight: bold;
     }
     .slide_low_title{
-      font-size: 30px;
+      font-size: 2vw;
       margin-bottom: 10px;
     }
 }
@@ -36,14 +35,53 @@ $buttonColor: #f8ba8c;
     background-color: $buttonColor;
     border-radius: 5px;
     display: flex;
-    width: 160px;
+    width: 10vw;
     justify-content: center;
     align-items: center;
     padding: 10px;
     a{
         color:$primaryColor;
-        font-size: 20px; 
+        font-size: 1.5vw; 
         
     }
+    }
 }
+
+@media screen and (max-width: 768px){
+    .slider_action{
+        .slide_title{
+             font-size: 6vw;
+        }
+        .slide_low_title{
+             font-size: 3vw;
+        }
+    }
+
+    .slider_image{
+        .my_link{
+            width: 25vw;
+            a{
+                 font-size: 3vw;
+            }
+        }
+    }
+}
+@media screen and (max-width: 576px){
+    .slider_action{
+        .slide_title{
+             font-size: 5vw;
+        }
+        .slide_low_title{
+             font-size: 3vw;
+        }
+    }
+
+    .slider_image{
+        .my_link{
+            width: 25vw;
+            a{
+                 font-size: 3vw;
+            }
+        }
+    }
 }

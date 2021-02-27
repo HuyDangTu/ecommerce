@@ -1,5 +1,6 @@
 $secondcolor: #F4F2ED;
 $primaryColor:#154100;
+@import '../initial.scss';
 
 @mixin default{
     padding: 0;
@@ -24,8 +25,7 @@ $primaryColor:#154100;
                 td{
                     padding: 10px;
                     border-bottom: 1px solid #ddd;
-                    font-size: 20px;
-                    
+                    font-size: calc_width(20);
                 }
             }
         }
@@ -36,8 +36,95 @@ $primaryColor:#154100;
                     padding: 10px;
                     color:rgb(124, 124, 124);
                     border-bottom: 1px solid #ddd;
+                     font-size: calc_width(20);
                 }
             }
         }
     }
+}
+
+@media screen and (max-width: 992px){
+    .history_blocks{
+    table{
+        thead{
+            tr{
+                td{
+                    font-size: calc_width(30);
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    font-size: calc_width(30);
+                }
+            }
+        }
+    }
+}
+}
+
+@media screen and (max-width: 768px){
+    .history_blocks{
+    table{
+        thead{
+            tr{
+                td{
+                    font-size: calc_width(35);
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    font-size: calc_width(35);
+                }
+            }
+        }
+    }
+}
+}
+
+
+@media screen and (max-width: 576px){
+    .history_blocks{
+    table{
+        thead{
+            tr{
+                td{
+                    font-size: calc_width(45);
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    font-size: calc_width(45);
+                }
+            }
+        }
+    }
+}
+}
+
+
+@media screen and (max-width: 576px){
+    .history_blocks{
+    table{
+        thead{
+            tr{
+                td{
+                    font-size: calc_width(55);
+                }
+            }
+        }
+        tbody{
+            tr{
+                td{
+                    font-size: calc_width(55);
+                }
+            }
+        }
+    }
+}
 }

@@ -5,8 +5,7 @@ import PaypalExpressBtn from 'react-paypal-express-checkout';
 class Paypal extends Component {
     
     render() {
-
-
+        
         const onSuccess = (payment) =>{
             this.props.onSuccess(payment)
             //console.log(JSON.stringify(payment))
@@ -29,8 +28,6 @@ class Paypal extends Component {
             production: ''
         }
 
-        
-
         return (
             <div>
                 <PaypalExpressBtn
@@ -42,7 +39,7 @@ class Paypal extends Component {
                     onSuccess={onSuccess}
                     onCancel={onCancel}
                     style={{
-                        size:'large',
+                        size:'medium',
                         color: 'blue',
                         shape: 'rect',
                         label: 'checkout'

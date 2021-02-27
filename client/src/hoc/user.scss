@@ -1,5 +1,6 @@
 $secondcolor: #F4F2ED;
 $primaryColor:#154100;
+@import '../components/ultils/initial.scss';
 
 @mixin default{
     padding: 0;
@@ -24,23 +25,192 @@ $primaryColor:#154100;
             width: 100%;
         }
         .col-xl-3{
+            padding-right: calc_width(50);
             .userLayout_left_nav{
                 div{
                     margin-bottom: 20px;
                     h2{
-                        font-size: 20px;
+                        font-size: calc_width(20);
                         font-weight: bold;
                         color:$primaryColor;
                         padding: 0px 0px 10px 0px;
                         border-bottom: 1px solid $secondcolor;
                     }
                     .links{
-            
-                        font-size: 15px;
+                        font-size: 1vw;
                         display: flex;
                         flex-direction: column;
+                        span{
+                            word-break: break-all;
+                        }
                         a{
+                            font-size: calc_width(18);
                             color: #636363
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .userLayout{
+        width: 100%;
+        margin: 0;
+        .userLayout_container{
+            .row{
+            .col-xl-3{
+                .userLayout_left_nav{
+                    div{
+                            h2{ 
+                                font-size: calc_width(35);
+                            }
+                            .links{
+                                span{
+                                    font-size: calc_width(25);
+                                }
+                                a{
+                                     font-size: calc_width(25);
+                                }
+                            }
+                            .my_link{
+                                a{
+                                    font-size: calc_width(30);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px){
+    .userLayout{
+        width: 100%;
+        margin: 0;
+        .userLayout_container{
+            .row{
+            .col-xl-3{
+                .userLayout_left_nav{
+                    div{
+                            h2{ 
+                                font-size: calc_width(40);
+                            }
+                            .links{
+                                span{
+                                    font-size: calc_width(30);
+                                }
+                                a{
+                                     font-size: calc_width(30);
+                                }
+                            }
+                            .my_link{
+                   
+                                a{
+                                    font-size: calc_width(30);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .userLayout{
+        width: 100%;
+        margin: 0;
+        .userLayout_container{
+            .row{
+            .col-xl-3{
+                .userLayout_left_nav{
+                    div{
+                            h2{ 
+                                font-size: calc_width(50);
+                            }
+                            .links{
+                                span{
+                                    font-size: calc_width(40);
+                                }
+                                a{
+                                     font-size: calc_width(40);
+                                }
+                            }
+                            .my_link{
+                                a{
+                                    font-size: calc_width(40);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .userLayout{
+        width: 100%;
+        margin: 0;
+        .userLayout_container{
+            .row{
+            .col-xl-3{
+                .userLayout_left_nav{
+                    div{
+                        h2{ 
+                            font-size: calc_width(60);
+                        }
+                        .links{
+                            span{
+                                font-size: calc_width(55);
+                            }
+                            a{
+                                font-size: calc_width(55);
+                            }
+                        }
+                        .my_link{
+                                a{
+                                    font-size: calc_width(55);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 416px){
+    .userLayout{
+        width: 100%;
+        margin: 0;
+        .userLayout_container{
+            .row{
+            .col-xl-3{
+                .userLayout_left_nav{
+                    div{
+                            h2{ 
+                                font-size: calc_width(70);
+                            }
+                            .links{
+                                span{
+                                    font-size: calc_width(60);
+                                }
+                                a{
+                                    font-size: calc_width(70);
+                                }
+                            }
+                            .my_link{
+                                a{
+                                    font-size: calc_width(70);
+                                }
+                            }
                         }
                     }
                 }

@@ -1,6 +1,7 @@
 $secondcolor: #F4F2ED;
 $primaryColor:#154100;
 $headerColor:#1a5200;
+@import '../../ultils/initial.scss';
 @mixin default{
     padding: 0;
     margin:0;
@@ -14,7 +15,75 @@ $headerColor:#1a5200;
 .header{
     @include default();
     background-color: $primaryColor;
-   color: white;
+    color: white;
+   .menu{
+        position: fixed;
+        z-index: 200;
+        top:0;
+
+        color: black;
+        background: white;
+
+        height: 100vh;
+        width: 40vw;
+
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.5s ease-in;
+        .close_button{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            .button_wrapper{
+                color: $buttonColor;
+                font-size: 18px;
+                font-weight: 500;
+                padding: 10px  20px 10px 0px;
+            }:hover{
+                font-weight: 600;
+                text-decoration: underline;
+            }
+        }
+        .menu_user{
+            display: flex;
+            flex-direction: column;
+            width:100%;
+            div{
+                border-bottom: 1px solid #ddd;
+                padding:10px;
+                a{
+                    color: $primaryColor;
+                    font-weight: 600;
+                    font-size: 3vw;
+                    text-decoration: none;
+                }
+            }:hover{
+                    background: $secondcolor;
+                    transition: 0.3s ease-in-out all;
+                }
+        }
+        .menu_page{
+            display: flex;
+            flex-direction: column;
+            a{
+                color: $primaryColor;
+                font-weight: 600;
+                font-size: 3vw;
+                padding: 10px;
+                text-decoration: none;
+                border-bottom: 1px solid #ddd;
+            }:hover{
+                background: $secondcolor;
+                transition: 0.3s ease-in-out all;
+            }
+        }
+   }
+    .toggle_active{
+    transform: translateX(0%);
+    }
+    .toggle_disable{
+        transform: translateX(-100%);
+    }
 }
 
 .header__container {
@@ -35,14 +104,24 @@ $headerColor:#1a5200;
     }
 }
 .header__logo{
+    height:100%;
+    display: flex;
+    align-items: center;
     a{
         font-weight: bold;
         color: white;
         text-decoration: none;
         text-transform: none;
-        font-size: 30px;
+        font-size: 2vw;
+    }
+    .toggleBtn{
+        display: none;
+    }
+    .cartBtn{
+        display: none;
     }
 }
+
 .header_row2{
     margin-top: 10px;
     .header__nav-page{
@@ -59,12 +138,167 @@ $headerColor:#1a5200;
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        .cart{
+            position: relative;
+            .cart_number{
+                background: red;
+                border-radius: 50%;
+
+                width: 1.2vw;
+                height: 1.2vw;
+
+                position: absolute;
+                top: -5px;
+                left: 10px;
+                padding: 0;
+                margin: 0;
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .number{
+                    text-align: center;
+                    font-size: 0.7vw;
+
+                    width: 1vw;
+                    height: 1vw;
+
+                    margin:0;
+                    border-radius: 50%;
+                }
+            }
+        }
         a{
             @include linkColor();
             font-weight: bold;
+            .label{
+                display: none;
+            }
+        }
+        .logout_btn,.login_btn{
+            display: flex;
+            align-items: center;
+            p{
+                margin-bottom: 0;
+                margin-left: 10px;
+            }
         }
         div{
             margin-left: 15px
         }
     }
 }
+
+@media screen and (max-width: 992px){
+    .header__logo{
+        a{
+            font-size: 2.7vw;
+        }
+    }
+    .header_row2{
+        .header__nav-user{
+            .logout_btn,.login_btn{
+                p{display: none;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .header__container {
+        width: 100%;
+    }
+    .header_row2{
+        display: none;
+    }
+    .cartButton{
+        display: none;
+    }
+    .header__logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            font-size: 5vw;
+        }
+        .toggleBtn{
+            display:inline;
+        }
+        .cartBtn{
+            display:inline;
+        }
+    }
+    .header{
+        .menu{
+            width: 60vw;
+            .menu_user{
+                a{
+                    font-size: 5vw;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+    
+                    p{
+                        margin: 0;
+                        padding-left: 10px;
+                    }
+                }
+                .cart{
+                    display: flex;
+                    .cart_number{  
+                      border-bottom: none;
+                      padding: 0;
+                      .number{
+                        color:red;
+                        font-weight: bold;
+                        border-bottom: none;
+                        padding: 0;
+                      }
+                    }
+                }
+            }
+            .menu_page{
+                a{
+                    font-size: 5vw;
+                    padding: 10px;
+                }
+               
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .header{
+        .menu{
+            width: 60vw;
+            .menu_user{
+                a{
+                    font-size: 5vw;
+                }
+            }
+            .menu_page{
+                a{
+                    font-size: 5vw;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 250px){
+    .header{
+        .menu{
+            width: 60vw;
+            .menu_user{
+                a{
+                    font-size: 50vw;
+                }
+            }
+            
+        }
+    }
+}
+

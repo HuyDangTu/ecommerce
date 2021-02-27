@@ -25,7 +25,6 @@ class  Card extends Component {
     render() {
         const props = this.props;
         return (
-          
             <div className = {`${props.grid}`}>
             <div className="card_item_wrapper">
                 <div className='item_image'
@@ -45,7 +44,7 @@ class  Card extends Component {
                                 ${props.price}
                             </div>
                             {
-                                props.grid ?
+                                props.grid === "grid_bars" ?
                                 <div className="description">
                                     {props.description}
                                 </div>
@@ -60,7 +59,7 @@ class  Card extends Component {
                         <MyButton
                         type="default"
                         altClass="card_link"
-                        title="View product"
+                        title="View"
                         linkTo={`product_detail/${props._id}`}
                         addStyle={{
                             margin: '10px 0 0 0'

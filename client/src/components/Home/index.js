@@ -20,10 +20,12 @@ class Home extends Component {
                     <HomeSlider />
                     <Banner/>
                     <CardBlock title='BEST SELLING PLANTS' 
-                        list={this.props.products.bySell}/>
+                        list={this.props.products.bySell}
+                            
+                        />
                     <HomePromotion />
                     <CardBlock title='NEW ARRIVAL'
-                        list={this.props.products.byArrival} />
+                        list={this.props.products.bySell} />
               
                 </div>
             </Layout>

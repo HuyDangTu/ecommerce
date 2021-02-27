@@ -30,7 +30,6 @@ $linkColor: #707070;
 }
 .signin__container{
     @include default();
-    padding: 0px 100px 0px 100px;
     .signin__form{
         display: flex;
         flex-direction: column;
@@ -70,8 +69,8 @@ $linkColor: #707070;
             input{
                 @include general;
                 color: black;
-                box-shadow: 1px 1px 5px #CBCBCB;
-                border:none;
+                border: 1px solid #CBCBCB;
+               
             }
         }
         }
@@ -89,5 +88,4 @@ $linkColor: #707070;
     }
 
 }
-
 

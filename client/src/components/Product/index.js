@@ -39,26 +39,32 @@ class ProductPage extends Component {
                         {
                         this.props.products.prodDetail?
                             <div className="product_detail_wrapper">
-                                <div className="left">
-                                    <div >
-                                        {
-                                            this.props.products.prodDetail.images?
-                                                <ProImg
-                                                    detail={this.props.products.prodDetail}
-                                                />
-                                            :""
-                                        }
+                                <div className="row no-gutters">
+                                    <div className="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12 no-gutters">
+                                        <div className="left">
+                                            <div >
+                                                {
+                                                    this.props.products.prodDetail.images?
+                                                        <ProImg
+                                                            detail={this.props.products.prodDetail}
+                                                        />
+                                                    :""
+                                                }
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="right">
-                                        {
-                                            this.props.products.prodDetail._id ?
-                                            <ProdInfo
-                                                addToCart={(id)=>this.addToCartHandler(id)}
-                                                detail={this.props.products.prodDetail}
-                                            />
-                                            : ""
-                                        }
+                                        <div className="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12  no-gutters">
+                                        <div className="right">
+                                                {
+                                                    this.props.products.prodDetail._id ?
+                                                    <ProdInfo
+                                                        addToCart={(id)=>this.addToCartHandler(id)}
+                                                        detail={this.props.products.prodDetail}
+                                                    />
+                                                    : ""
+                                                }
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         : <div className="CircularProgress">

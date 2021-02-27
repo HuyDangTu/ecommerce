@@ -22,9 +22,9 @@ const UserHistoryBlock = (props) => {
             <table>
                 <thead>
                     <tr>
-                        <td>Date of purchase</td>
+                        <td>Date </td>
                         <td>Product</td>
-                        <td>Price paid</td>
+                        <td>Price</td>
                         <td>Quantity</td>
                     </tr>
                 </thead>

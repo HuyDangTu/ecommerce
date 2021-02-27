@@ -110,20 +110,22 @@ class UserCard extends Component {
                             type="cart"
                             removeItem={(id) => this.removeFromCart(id)}
                         />
-                        {this.state.showTotal ? 
+                        {
+                            this.state.showTotal ? 
                             <div className="uesr_cart_sum">
                                 <div>
                                     Total amount: $ {this.state.total}
                                 </div>
                             </div>
-                        : this.state.showSuccess ? 
-                            <div className="cart_success">
-                                    <FontAwesomeIcon size="3x" icon={faCheckCircle} />
-                                    <div className="message" >
-                                        THANK YOU, YOUR ORDER IS NOW COMPLETE
-                                    </div>
-                            </div>
-                        :this.showItemMessage()}
+                            : this.state.showSuccess ? 
+                                <div className="cart_success">
+                                        <FontAwesomeIcon size="3x" icon={faCheckCircle} />
+                                        <div className="message" >
+                                            THANK YOU, YOUR ORDER IS NOW COMPLETE
+                                        </div>
+                                </div>
+                            : this.showItemMessage()
+                        }
                     </div>
                     {
                         this.state.showTotal?

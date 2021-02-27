@@ -59,3 +59,15 @@ $primaryColor:#154100;
         }
     }
 }
+
+@media screen and (max-width: 576px){
+    .admin_category_wrapper{
+        .admin_two_column{
+            flex-direction: column;
+            .right{
+                margin:0;
+             
+            }
+        }
+    }
+}

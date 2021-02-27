@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer container-fluid" >
             <div className="footer__container container-fluid"> 
                 <div className="row no-gutters">
-                    <div className="col-xl-3 no-gutters">
+                    <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 no-gutters">
                         <div className="footer__container__left">
                             <h4>Contact</h4>
                             <div className="bussiness-info">
@@ -55,7 +55,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-3 no-gutters">
+                    <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 no-gutters">
                         <div className="footer__container__left">
                             <h4>Company</h4>
                             <div className="bussiness-info">
@@ -82,7 +82,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-3 no-gutters">
+                    <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 no-gutters">
                         <div className="footer__container__left">
                             <h4>Support</h4>
                             <div className="bussiness-info">
@@ -116,7 +116,7 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-3 no-gutters">
+                    <div className="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12 no-gutters">
                         <div className="footer__container__left">
                             <h4>Work with us</h4>
                             <div className="bussiness-info">
